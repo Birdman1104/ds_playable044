@@ -1,0 +1,63 @@
+import { Point } from '@pixi/math';
+
+export const getHandSpriteConfig = (): SpriteConfig => {
+  return {
+    atlas: 'game',
+    frame: `hand.png`,
+    anchor: new Point(0.06, 0.05),
+  };
+};
+export const getLogoSpriteConfig = (
+  type: 1 | 2,
+  x: number,
+  y: number,
+  scale?: number,
+): SpriteConfig => {
+  return {
+    atlas: 'game',
+    frame: `logo_${type}.png`,
+    x,
+    y,
+    scaleX: scale ?? 0.8,
+    scaleY: scale ?? 0.8,
+  };
+};
+
+export const getButtonSpriteConfig = (): SpriteConfig => {
+  return {
+    atlas: 'game',
+    frame: `button.png`,
+    scaleX: 0.4,
+    scaleY: 0.4,
+  };
+};
+
+export const getCongratsSpriteConfig = (
+  type: 'good' | 'great' | 'perfect' | 'goodJob',
+): SpriteConfig => {
+  return {
+    atlas: 'game',
+    frame: `${type}.png`,
+    scaleX: 0,
+    scaleY: 0,
+    alpha: 0,
+  };
+};
+
+export const getBackgroundSpriteConfig = (): SpriteConfig => {
+  return {
+    frame: `bkg.jpg`,
+  };
+};
+export const getPCtaSpriteConfig = (): SpriteConfig => {
+  return { atlas: 'ui', frame: `pcta.png` };
+};
+export const getHintSpriteConfig = (): SpriteConfig => {
+  return { atlas: 'ui', frame: `circle.png` };
+};
+export const getSoundButtonSpriteConfig = (type: 'on' | 'off'): SpriteConfig => {
+  return { atlas: 'ui', frame: `sound_${type}.png` };
+};
+export const getNumberSpriteConfig = (frame: string, atlas: string): SpriteConfig => {
+  return { atlas, frame: `${frame}.png`, anchor: new Point(0.5, 0.5), scaleX: 0.5, scaleY: 0.5 };
+};
