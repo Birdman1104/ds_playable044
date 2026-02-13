@@ -1,3 +1,4 @@
+<meta charset="utf-8">
 <meta name="viewport"
     content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1,minimal-ui=true">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -27,15 +28,17 @@
 <script>var playableChannel = 'Mintegral';</script>
 <script>
     function installCTA() {
-        window.install();
+        window.gameEnd && window.gameEnd()
+
+        window.install && window.install();
     }
     window.gameStart = () => {
         //
     };
     window.gameClose = () => {
-        //
     };
     window.onload = function () {
         window.createGame();
+        window.gameReady && window.gameReady()
     };
 </script>
