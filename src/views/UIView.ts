@@ -50,10 +50,10 @@ class Wrapper extends Container {
     const textureRandom = config.behaviors.find((b) => b.type === 'textureRandom');
     if (textureRandom) {
       textureRandom.config.textures = [
-        Texture.from('particle_1.png'),
-        Texture.from('particle_2.png'),
-        Texture.from('particle_3.png'),
-        Texture.from('particle_4.png'),
+        Texture.from(window.GAME_ASSETS.particle1),
+        Texture.from(window.GAME_ASSETS.particle2),
+        Texture.from(window.GAME_ASSETS.particle3),
+        Texture.from(window.GAME_ASSETS.particle4),
       ];
     }
 

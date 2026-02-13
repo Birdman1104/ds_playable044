@@ -1,7 +1,6 @@
+import { Sprite } from '@pixi/sprite';
 import { PixiGrid } from 'libs/grid';
 import { getBackgroundGridConfig } from '../configs/gridConfigs/BackgroundViewGC';
-import { makeSprite } from '../utils/Utils';
-import { getBackgroundSpriteConfig } from '../configs/SpriteConfig';
 
 export class BackgroundView extends PixiGrid {
   constructor() {
@@ -18,7 +17,9 @@ export class BackgroundView extends PixiGrid {
   }
 
   private build(): void {
-    const bkg = makeSprite(getBackgroundSpriteConfig());
-    this.attach('bkg', bkg);
+    const bkg = Sprite.from(window.GAME_ASSETS.bkgTexture);
+    setTimeout(() => {
+      this.attach('bkg', bkg);
+    });
   }
 }
