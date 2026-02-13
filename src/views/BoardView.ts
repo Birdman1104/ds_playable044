@@ -1232,7 +1232,7 @@ export class BoardView extends Container {
 
     anime({
       targets: [this.backgroundLayer, this.gemsLayer],
-      alpha: 0.1,
+      alpha: 0.3,
       duration: ZOOM_DURATION,
       easing: 'easeInOutQuad',
     });
@@ -1282,7 +1282,7 @@ export class BoardView extends Container {
 
     anime({
       targets: [this.backgroundLayer, this.gemsLayer, this.misfilledLayer1],
-      alpha: 0.1,
+      alpha: 0.3,
       duration: ZOOM_DURATION,
       easing: 'easeInOutQuad',
     });
