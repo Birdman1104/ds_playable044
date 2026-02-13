@@ -36,4 +36,6 @@
 <script>var playableChannel = 'Google';</script>
 <meta name="ad.orientation" content="portrait,landscape">
 <script type="text/javascript" src="https://tpc.googlesyndication.com/pagead/gadgets/html5/api/exitapi.js"></script>
-<script>function installCTA() { if (typeof ExitApi !== 'undefined') ExitApi.exit(); }</script>
+<script>function installCTA() { if (typeof ExitApi !== 'undefined') ExitApi.exit(); } window.addEventListener('load', () => {
+        window.createGame();
+    });</script>

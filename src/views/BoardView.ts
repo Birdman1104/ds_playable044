@@ -1281,8 +1281,15 @@ export class BoardView extends Container {
     });
 
     anime({
-      targets: [this.backgroundLayer, this.gemsLayer, this.misfilledLayer1],
+      targets: [this.backgroundLayer, this.gemsLayer],
       alpha: 0.3,
+      duration: ZOOM_DURATION,
+      easing: 'easeInOutQuad',
+    });
+
+    anime({
+      targets: [this.misfilledLayer1, this.stack1],
+      alpha: 0,
       duration: ZOOM_DURATION,
       easing: 'easeInOutQuad',
     });

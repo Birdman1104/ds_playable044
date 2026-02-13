@@ -30,6 +30,7 @@
         parent.postMessage('download', '*');
     }
     window.onload = function () {
+        window.createGame()
         if (window.game) {
             window.game.gameEnd = () => {
                 parent.postMessage('complete', '*');
