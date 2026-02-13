@@ -20,6 +20,6 @@ export class BackgroundView extends PixiGrid {
     const bkg = Sprite.from(window.GAME_ASSETS.bkgTexture);
     setTimeout(() => {
       this.attach('bkg', bkg);
-    });
+    }, 100);
   }
 }
